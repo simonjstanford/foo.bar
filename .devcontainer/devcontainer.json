@@ -8,7 +8,10 @@
 		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
 		"args": { "VARIANT": "ubuntu-22.04" }
 	},
-
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance"
+	  ],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
