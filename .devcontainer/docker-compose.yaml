@@ -1,0 +1,20 @@
+version: '3.7'
+x-build: &default-build
+  context: ../
+  args:
+    - UID=${UID:?Run generate_env}
+    - GID=${GID:?Run generate_env}
+x-volumes: &default-volumes
+  - '${HOME}:${HOME}'
+
+services:
+  dev:
+    build: 
+      << : *default-build
+      dockerfile:  Dockerfile
+    image: foo.bar
+    privileged: true
+    volumes: *default-volumes
+    working_dir: ${HOME}
+    environment:
+      - HOME=${HOME}
