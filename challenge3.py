@@ -65,7 +65,7 @@ def get_next_moves(src, board):
     # two rows above
     if src_y > 1:
         # not the left edge
-        if src_x > 1:
+        if src_x > 0:
             up_left = board[src_y-2][src_x-1]
             next_moves.append(up_left)
 
@@ -96,7 +96,7 @@ def get_next_moves(src, board):
             next_moves.append(left_up)
 
         # not the bottom edge
-        if src < 7:
+        if src_y < 7:
             left_down = board[src_y+1][src_x-2]
             next_moves.append(left_down)
 
