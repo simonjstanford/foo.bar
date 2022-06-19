@@ -7,7 +7,8 @@ ARG GID=1000
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
-    vim nano
+    vim nano \
+    git
 
 
 RUN groupadd -g $GID $UNAME && \
